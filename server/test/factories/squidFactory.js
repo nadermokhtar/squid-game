@@ -10,11 +10,10 @@ import { squidSpecies } from "./helpers/squidSpecies.js";
 // table.string("special_power", 500);
 // table.integer("points").notNullable().defaultTo(0);
 // table.timestamp("created_at").defaultTo(knex.fn.now());
-export default Factory.define("Squid", Squid)
+export const SquidFactory = new Factory.define("Squid", Squid)
   .attr("id", faker.datatype.uuid())
   .attr("name", faker.name.fullName())
   .attr("species", faker.helpers.arrayElement(squidSpecies))
   .attr("special_power", faker.word.verb())
   .attr("points", faker.random.numeric(6, { bannedDigits: ["0"] }))
   .attr("created_at", faker.date.now);
-

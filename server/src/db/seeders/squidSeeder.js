@@ -1,11 +1,9 @@
-import { Factory } from "../../../test/factories/Factory.js"
-import { Squid } from "../../models/index.js"
-import { Configuration } from "../../services/Configuration.js"
-import "../../../test/factories/factories.js"
+import "../../../test/factories/factories.js";
+import { Factory } from "../../../test/factories/Factory.js";
 
 export class SquidSeeder {
   static async seed() {
-    const squidFactory = new Factory(Squid)
-    await squidFactory.createMany(5)
+    const squidFactory = new Factory(squidFactory);
+    await squidFactory.createMany(5);
   }
 }
