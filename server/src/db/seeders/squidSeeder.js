@@ -1,9 +1,16 @@
 import "../../../test/factories/factories.js";
 import { Factory } from "../../../test/factories/Factory.js";
+import Squid from "../../models/Squid.js";
 
-export class SquidSeeder {
+class SquidSeeder {
   static async seed() {
-    const squidFactory = new Factory(squidFactory);
-    await squidFactory.createMany(5);
+    try {
+      const squidFactory = new Factory(Squid);
+      await squidFactory.createMany(3);
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log(error);
+    }
   }
 }
+export { SquidSeeder };

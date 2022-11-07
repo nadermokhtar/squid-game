@@ -1,12 +1,5 @@
 const { Model } = require("objection");
-
-/**
- *
- *
- * @class Model
- */
 class Squid extends Model {
-  // Table name is the only required property.
   static get tableName() {
     return "squids";
   }
@@ -31,4 +24,5 @@ class Squid extends Model {
     };
   }
 }
+
 module.exports = Squid;

@@ -1,9 +1,9 @@
 import express from "express";
 
-import { Squid } from "../../../../models/squid";
+import { Squid } from "../../../../models/Squid.js";
 import { nextWrapper } from "../../../lib/nextWrapper.js";
 
-const squidsRouter = express.Router();
+const squidsRouter = new express.Router();
 
 squidsRouter.get(
   "/",
