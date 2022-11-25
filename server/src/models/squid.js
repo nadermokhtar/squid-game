@@ -4,15 +4,14 @@ class Squid extends Model {
     return "squids";
   }
 
-  static get idColumn() {
-    return "id";
-  }
+  // static get idColumn() {
+  //   return "id";
+  // }
 
   static get jsonSchema() {
     return {
       type: "object",
       required: ["id", "name", "species", "points"],
-
       properties: {
         id: { type: "integer" },
         name: { type: "string", minLength: 1, maxLength: 1000 },

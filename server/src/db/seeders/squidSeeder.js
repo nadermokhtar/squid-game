@@ -1,6 +1,6 @@
 import "../../../test/factories/factories.js";
 import { Factory } from "../../../test/factories/Factory.js";
-import Squid from "../../models/Squid.js";
+import { Squid } from "../../models/index.js";
 
 class SquidSeeder {
   static async seed() {
