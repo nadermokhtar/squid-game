@@ -1,6 +1,7 @@
 import { describe, expect, it } from "@jest/globals";
 import request from "supertest";
-import { app } from "./../../app";
+
+import { app } from "./../../app.js";
 
 describe("GET /squids", function () {
   it("responds with json", async () => {

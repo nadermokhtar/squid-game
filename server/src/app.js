@@ -34,4 +34,4 @@ app.listen(config.web.port, config.web.host, () => {
   // eslint-disable-next-line no-console
   console.log("Server is listening on port " + config.web.port);
 });
-export default app
+export { app };

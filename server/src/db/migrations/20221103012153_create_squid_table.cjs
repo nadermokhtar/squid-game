@@ -7,10 +7,10 @@
  */
 exports.up = async (knex) => {
   return knex.schema.createTable("squids", function (table) {
-    table.increments("id").primary().notNullable();
-    table.string("name", 1000).notNullable().unique();
-    table.string("species", 255).notNullable();
-    table.string("special_power", 500);
+    table.bigIncrements("id");
+    table.string("name").notNullable().unique();
+    table.string("species").notNullable();
+    table.string("specialPower");
     table.integer("points").notNullable().defaultTo(0);
     table.timestamps(true, true);
   });
